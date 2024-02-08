@@ -2,6 +2,7 @@ import requests
 import m3u8
 from lxml import etree
 import sys
+from tqdm import tqdm
 
 import ffmpeg
 import subprocess
@@ -30,7 +31,7 @@ def get_url(tv):
     html = r.text
     tree = etree.HTML(html)
     m3u8_links = tree.xpath('.//div[@class="m3u8"]/table/td[2]/text()')
-
+    
     for link in m3u8_links :
         if check_link(link.strip()) :
             return link
@@ -41,7 +42,7 @@ def gen_table():
         tv_lists = [line.strip() for line in f.readlines()]
 
     lines_to_write = []
-    for tv in tv_lists:
+    for tv in tqdm(tv_lists, desc="Processing URLs"):
         url= get_url(tv) 
         if url:
             tvg_id = tv

@@ -1,0 +1,44 @@
+name: Publish TV M3U8 to Releases
+
+on:
+  push:
+    branches:
+      - main  # 或者你使用的默认分支名称
+  schedule:
+    - cron: '0 0 * * *'  
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        run: |
+          curl -fsSL https://pixi.sh/install.sh | bash
+          export PATH="$HOME/.pixi/bin:$PATH"
+
+      - name: Start Project
+        run: pixi run start
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Upload TV M3U8 to Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./tv.m3u8
+          asset_name: tv.m3u8
+          asset_content_type: application/octet-stream
