@@ -1,0 +1,20 @@
+[project]
+name = "tv_list"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["newird <newird@protonmail.com>"]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tasks]
+start = "python main.py"
+fmt = "ruff format"
+lint = "ruff lint --fix"
+style = { depends_on = ["fmt", "lint"] }
+
+[dependencies]
+requests = ">=2.31.0,<2.32"
+ruff = ">=0.2.1,<0.3"
+lxml = ">=5.1.0,<5.2"
+pip = ">=24.0,<25"
+ffmpeg-python = ">=0.2.0,<0.3"
