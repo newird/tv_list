@@ -21,7 +21,7 @@ jobs:
           export PATH="$HOME/.pixi/bin:$PATH"
 
       - name: Start Project
-        run: pixi run start
+        run: $HOME/.pixi/bin/pixi run start
 
       - name: Create Release
         id: create_release
