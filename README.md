@@ -1,6 +1,6 @@
 ## quick start
 
-### install pixi 
+### install pixi
 
 [prefix.dev](https://prefix.dev/)
 
@@ -11,7 +11,7 @@ iwr -useb https://pixi.sh/install.ps1 | iex
 curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
-start the project
+### start the project
 
 ```shell
 pixi run start
@@ -19,6 +19,6 @@ pixi run start
 
 it will generate a file named `tv.m3u8` , open it with potplayer or VLC or any player you like
 
-### contribute
+## contribute
 
 feel free to pull request
