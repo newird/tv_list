@@ -9,7 +9,7 @@ platforms = ["win-64"]
 [tasks]
 start = "python main.py"
 fmt = "ruff format"
-lint = "ruff lint --fix"
+lint = "ruff linter"
 style = { depends_on = ["fmt", "lint"] }
 
 [dependencies]
