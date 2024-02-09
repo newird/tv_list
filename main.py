@@ -1,7 +1,7 @@
 import requests
 from lxml import etree
 from tqdm import tqdm
-
+from concurrent.futures import ThreadPoolExecutor
 import ffmpeg
 
 
@@ -31,7 +31,7 @@ def get_url(tv):
 
     for link in m3u8_links:
         if check_link(link.strip()):
-            return link
+            return f'#EXTINF:-1 tvg-id="{tv}" ,{tv}\n{link}\n'
     return None
 
 
@@ -40,11 +40,17 @@ def gen_table():
         tv_lists = [line.strip() for line in f.readlines()]
 
     lines_to_write = []
-    for tv in tqdm(tv_lists, desc="Processing URLs"):
-        url = get_url(tv)
-        if url:
-            tvg_id = tv
-            lines_to_write.append(f'#EXTINF:-1 tvg-id="{tvg_id}" ,{tv}\n{url}\n')
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        results = list(
+            tqdm(
+                executor.map(get_url, tv_lists),
+                total=len(tv_lists),
+                desc="Processing URLs",
+            )
+        )
+
+    lines_to_write = [result for result in results if result]
 
     with open("tv.m3u8", "w+", encoding="utf-8") as f:
         f.writelines(lines_to_write)

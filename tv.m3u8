@@ -21,7 +21,7 @@
 #EXTINF:-1 tvg-id="CCTV10" ,CCTV10
  https://iptv.luas.edu.cn/liverespath/924e6292a0e6f7440e8380075908fed9915b3c00/780499a193-0-0-c50d57fd93cf32a5144ec8d889eb3ed9/index.m3u8
 #EXTINF:-1 tvg-id="CCTV11" ,CCTV11
- https://iptv.luas.edu.cn/liverespath/3d0aa0f1604f13f0ae90c2dc0590ca22a1bcaaa2/646e868153-0-0-a53121a1df5b93a74d1980270e652878/index.m3u8
+ http://221.2.146.228:8888/newlive/live/hls/12/live.m3u8
 #EXTINF:-1 tvg-id="CCTV12" ,CCTV12
  https://iptv.luas.edu.cn/liverespath/fb84bde1de15cdb0308a7910cebc0497594ae94e/e2d8885f42-0-0-6e1f55986652ba786606a116c5cc0775/index.m3u8
 #EXTINF:-1 tvg-id="CCTV13" ,CCTV13
@@ -35,7 +35,7 @@
 #EXTINF:-1 tvg-id="CCTV4K" ,CCTV4K
  https://live.goodiptv.club/api/cqyx.php?id=CCTV4K
 #EXTINF:-1 tvg-id="北京卫视" ,北京卫视
- http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226222/index.m3u8
+ http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221225796/index.m3u8?
 #EXTINF:-1 tvg-id="天津卫视" ,天津卫视
  http://jltpc.x3322.net:9901/tsfile/live/0135_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-id="河北卫视" ,河北卫视
@@ -49,13 +49,13 @@
 #EXTINF:-1 tvg-id="吉林卫视" ,吉林卫视
  https://pulltv1.wanfudaluye.com/live/tv1.m3u8
 #EXTINF:-1 tvg-id="黑龙江卫视" ,黑龙江卫视
- https://iptv.luas.edu.cn/liverespath/fe1745c7599e85d0a34fa0ad3986ef25c2ed7c6f/62f40ca683-0-0-8f0a9a264759754e90aa804bf7e9f8a8/index.m3u8
+ http://221.210.64.165:2233/hls/1/index.m3u8
 #EXTINF:-1 tvg-id="上海卫视" ,上海卫视
  http://61.138.128.226:19901/tsfile/live/0107_1.m3u8
 #EXTINF:-1 tvg-id="江苏卫视" ,江苏卫视
  http://220.191.68.63:10000/rtp/233.50.201.106:5140
 #EXTINF:-1 tvg-id="浙江卫视" ,浙江卫视
- http://jinjiang.chongqing.moetv.sn-m.xyz:8089/newlive/live/hls/19/live.m3u8
+ http://183.134.3.22:8888/newlive/live/hls/23/live.m3u8
 #EXTINF:-1 tvg-id="安徽卫视" ,安徽卫视
  http://221.2.146.228:8888/newlive/live/hls/24/live.m3u8
 #EXTINF:-1 tvg-id="江西卫视" ,江西卫视
@@ -79,7 +79,7 @@
 #EXTINF:-1 tvg-id="四川卫视" ,四川卫视
  http://218.88.42.18:4022/udp/239.93.0.169:5140
 #EXTINF:-1 tvg-id="贵州卫视" ,贵州卫视
- http://113.140.86.162:8001/hls/50/index.m3u8
+ http://222.189.51.62:8888/newlive/live/hls/29/live.m3u8
 #EXTINF:-1 tvg-id="云南卫视" ,云南卫视
  http://117.174.81.63:50080/newlive/live/hls/41/live.m3u8
 #EXTINF:-1 tvg-id="西藏卫视" ,西藏卫视
@@ -102,3 +102,5 @@
  http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=683118
 #EXTINF:-1 tvg-id="东方卫视" ,东方卫视
  https://iptv.luas.edu.cn/liverespath/4015e6015b3b818a4cbc2247960b8536a3cd0153/0bc51b40df-0-0-23a64a0dc546104d1ba498a41ff49540/index.m3u8
+#EXTINF:-1 tvg-id="凤凰卫视中文台" ,凤凰卫视中文台
+ https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV43.m3u8
